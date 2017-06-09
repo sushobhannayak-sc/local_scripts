@@ -31,6 +31,9 @@ alias bk-remote='gcloud compute ssh --zone=us-central1-f --project=research-prot
 alias bk-remote-chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --proxy-server="socks5://localhost:1080" --host-resolver-rules="MAP * 0.0.0.0 , EXCLUDE localhost" --user-data-dir=/tmp/ http://breaking-news-instance-1:8123/notebooks/'
 alias jupyter-hub='gcloud compute ssh sushobhan.nayak@jupyter-hub --project snapsearch-dev --zone us-central1-c' 
 alias cleanidea='cd /Users/sushobhan.nayak/Desktop/Snapchat/Dev/appengine;./gradlew clean;./gradlew idea';
+alias context-tunnel='gcloud compute ssh --zone="us-west1-a" --project=snap-brain --ssh-flag="-D" --ssh-flag="10000" --ssh-flag="-N" "contextual-service-m"'
+alias context='gcloud compute ssh --zone="us-west1-a" --project=snap-brain "contextual-service-m"'
+alias context-chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome "http://contextual-service-m:8123" --proxy-server="socks5://localhost:10000" --host-resolver-rules="MAP * 0.0.0.0 , EXCLUDE localhost" --user-data-dir=/tmp/'
 
 #export GOOGLE_APPLICATION_CREDENTIALS=/Users/sushobhan.nayak/.credentials/snap-eye-84d40d8e9589.json
 # added by Anaconda2 4.1.1 installer
